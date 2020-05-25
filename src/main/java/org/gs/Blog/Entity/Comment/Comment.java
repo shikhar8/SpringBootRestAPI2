@@ -11,12 +11,23 @@ public class Comment{
     @Id
     @Column(name = "id")
     private  int id;
+    @Column(name="post_id")
+    private int postId;
     @Column(name = "body")
     private String body;
 
-    public Comment(int id, String body) {
+    public Comment(int id, int postId, String body) {
         this.id = id;
+        this.postId = postId;
         this.body = body;
+    }
+
+    public int getPostId() {
+        return postId;
+    }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
     }
 
     public Comment() {
