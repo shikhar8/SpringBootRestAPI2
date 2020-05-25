@@ -12,18 +12,18 @@ import java.util.List;
 public class CommentsController {
     @Autowired
     private CommentsService commentsService;
-    @RequestMapping(value = "/comments/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public List<Comment> getCommentsById(@PathVariable int id){
         return commentsService.getCommentsById(id);
     }
-    @RequestMapping(value = "/comments",method = RequestMethod.POST)
+    @RequestMapping(value = "",method = RequestMethod.POST)
     void addPost(@RequestBody Comment comment){
         commentsService.addComment(comment);
     }
-    @RequestMapping(value = "/comments/{id}",method = RequestMethod.PUT)
+    @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
     void updatePost(@RequestBody Comment comment,@PathVariable int id){
          commentsService.updateComment(comment,id);
-    }@RequestMapping(value = "/comments/{id}",method = RequestMethod.DELETE)
+    }@RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
     void deletePost(@PathVariable int id){
          commentsService.deleteComment(id);
     }

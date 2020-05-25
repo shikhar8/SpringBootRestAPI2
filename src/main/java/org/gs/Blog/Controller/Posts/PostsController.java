@@ -12,22 +12,22 @@ import java.util.List;
 public class PostsController {
     @Autowired
     private PostsService postsService;
-    @RequestMapping(value = "/posts",method = RequestMethod.GET)
+    @RequestMapping(value = "",method = RequestMethod.GET)
     public List<Post> getPosts(){
         return postsService.getPosts();
     }
-   @RequestMapping(value = "/posts/{id}",method = RequestMethod.GET)
+   @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public Post getPostsById(@PathVariable int id){
         return postsService.getPostsById(id);
     }
-    @RequestMapping(value = "/posts",method = RequestMethod.POST)
+    @RequestMapping(value = "",method = RequestMethod.POST)
     void addPost(@RequestBody Post post){
          postsService.addPost(post);
     }
-    @RequestMapping(value = "/posts/{id}",method = RequestMethod.PUT)
+    @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
     void updatePost(@RequestBody Post post,@PathVariable int id){
          postsService.updatePost(post,id);
-    }@RequestMapping(value = "/posts/{id}",method = RequestMethod.DELETE)
+    }@RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
     void deletePost(@PathVariable int id){
          postsService.deletePost(id);
     }
