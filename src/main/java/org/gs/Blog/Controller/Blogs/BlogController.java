@@ -19,10 +19,13 @@ public class BlogController {
     private PostsRepository postsRepository;
     @Autowired
     private CommentsRepository commentsRepository;
+    @Autowired
+    private Blog blog;
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public Blog getBlogById(@PathVariable int id)
     {
-        Blog blog=new Blog(commentsRepository.findBypostId(id),postsRepository.findById(id).get());
+        blog.setPost(postsRepository.findById(id).get());
+        blog.setComments(commentsRepository.findBypostId(id));
         return blog;
     }
     @RequestMapping(value="/{id}",method = RequestMethod.DELETE)
