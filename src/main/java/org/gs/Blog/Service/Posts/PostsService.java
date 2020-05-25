@@ -1,9 +1,10 @@
-package org.gs.Blog.Service.PostsService;
+package org.gs.Blog.Service.Posts;
 
 import org.gs.Blog.Entity.Post.Post;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class PostsService {
     public List<Post> getPosts() {
         return null;
