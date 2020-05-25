@@ -1,20 +1,21 @@
 package org.gs.Blog.Entity.Comment;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import javax.persistence.*;
 @Entity
 @Table(name = "comments")
 public class Comment{
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private  int id;
     @Column(name="post_id")
     private int postId;
     @Column(name = "body")
     private String body;
+
+    public Comment(int postId, String body) {
+        this.postId = postId;
+        this.body = body;
+    }
 
     public Comment(int id, int postId, String body) {
         this.id = id;

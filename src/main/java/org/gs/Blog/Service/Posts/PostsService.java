@@ -27,10 +27,12 @@ public class PostsService {
     }
 
     public void addPost(Post post) {
+
         postsRepository.save(post);
     }
 
     public void updatePost(Post post, int id) {
+
         postsRepository.save(post);
     }
     public void deletePost(int id) {
