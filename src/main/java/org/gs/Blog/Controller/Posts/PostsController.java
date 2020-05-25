@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/posts")
 public class PostsController {
     @Autowired
     private PostsService postsService;
@@ -15,7 +16,7 @@ public class PostsController {
     public List<Post> getPosts(){
         return postsService.getPosts();
     }
-    @RequestMapping(name = "/posts/{id}",method = RequestMethod.GET)
+   @RequestMapping(name = "/posts/{id}",method = RequestMethod.GET)
     public Post getPostsById(@PathVariable int id){
         return postsService.getPostsById(id);
     }
