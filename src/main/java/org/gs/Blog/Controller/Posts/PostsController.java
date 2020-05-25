@@ -16,7 +16,7 @@ public class PostsController {
         return postsService.getPosts();
     }
     @RequestMapping(name = "/posts/{id}",method = RequestMethod.GET)
-    public List<Post> getPostsById(@PathVariable int id){
+    public Post getPostsById(@PathVariable int id){
         return postsService.getPostsById(id);
     }
     @RequestMapping(name = "/posts",method = RequestMethod.POST)
