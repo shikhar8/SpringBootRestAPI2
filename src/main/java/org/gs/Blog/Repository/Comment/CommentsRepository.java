@@ -1,4 +1,4 @@
-package org.gs.Blog.Repository.Comments;
+package org.gs.Blog.Repository.Comment;
 
 import org.gs.Blog.Entity.Comment.Comment;
 import org.springframework.data.repository.CrudRepository;

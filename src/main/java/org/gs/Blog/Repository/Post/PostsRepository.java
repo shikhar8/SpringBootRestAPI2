@@ -1,4 +1,4 @@
-package org.gs.Blog.Repository.Posts;
+package org.gs.Blog.Repository.Post;
 
 import org.gs.Blog.Entity.Post.Post;
 import org.springframework.data.repository.CrudRepository;

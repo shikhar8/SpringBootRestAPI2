@@ -1,6 +1,6 @@
 package org.gs.Blog.Service.Posts;
 import org.gs.Blog.Entity.Post.Post;
-import org.gs.Blog.Repository.Posts.PostsRepository;
+import org.gs.Blog.Repository.Post.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;

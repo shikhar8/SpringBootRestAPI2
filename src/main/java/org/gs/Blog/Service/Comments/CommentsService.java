@@ -1,6 +1,6 @@
 package org.gs.Blog.Service.Comments;
 import org.gs.Blog.Entity.Comment.Comment;
-import org.gs.Blog.Repository.Comments.CommentsRepository;
+import org.gs.Blog.Repository.Comment.CommentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
