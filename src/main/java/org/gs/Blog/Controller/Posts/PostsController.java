@@ -2,6 +2,7 @@ package org.gs.Blog.Controller.Posts;
 
 import javafx.geometry.Pos;
 import org.gs.Blog.Entity.Post.Post;
+import org.gs.Blog.Service.PostsService.PostsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

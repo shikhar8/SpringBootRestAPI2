@@ -3,6 +3,7 @@ package org.gs.Blog.Controller.Comments;
 import javafx.geometry.Pos;
 import org.gs.Blog.Entity.Comment.Comment;
 import org.gs.Blog.Entity.Post.Post;
+import org.gs.Blog.Service.CommentsService.CommentsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
