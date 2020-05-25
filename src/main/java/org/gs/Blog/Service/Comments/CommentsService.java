@@ -1,17 +1,15 @@
 package org.gs.Blog.Service.Comments;
-
 import org.gs.Blog.Entity.Comment.Comment;
 import org.gs.Blog.Repository.Comments.CommentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 @Service
 public class CommentsService {
     @Autowired
     private CommentsRepository commentsRepository;
     public List<Comment> getCommentsById(int id) {
-        return null;
+        return commentsRepository.findBypostId(id);
     }
 
     public void addComment(Comment comment) {
